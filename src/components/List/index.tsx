@@ -1,5 +1,5 @@
 import React from 'react'
-import './style.scss'
+import style from './style.module.scss'
 
 function Lista() {
   const tarefas = [{
@@ -14,11 +14,11 @@ function Lista() {
   }]
 
   return (
-    <aside className='listaTarefas'>
+    <aside className={style.listaTarefas}>
       <h2>Estudos do Dia</h2>
         <ul>
           {tarefas.map((item, index) => ( // () retorna JSX e {} um escopo | Uma renderização sempre precisa do key, são usadas no React para identificar quais itens na lista são alterados, atualizados ou excluídos. (Ideal que seja um ID unico)
-            <li key={index} className='item'>
+            <li key={index} className={style.item}>
               <h3>
                 {item.name}
               </h3>
